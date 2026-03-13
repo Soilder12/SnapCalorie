@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SnapCalorie SPA Redirect</title>
+    <script type="text/javascript">
+      // GitHub Pages SPA fallback
+      // This script takes the current URL and converts it into a format that React Router can understand,
+      // storing the original path in sessionStorage before redirecting to the base URL.
+      var pathSegmentsToKeep = 1; // 1 because base is /SnapCalorie/
+      
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
