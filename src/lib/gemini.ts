@@ -1,7 +1,7 @@
 import { UserProfile, WeightLossPlan, FoodItem } from '../types';
 
 const SILICONFLOW_API_URL = 'https://api.siliconflow.cn/v1/chat/completions';
-const SILICONFLOW_API_KEY = process.env.SILICONFLOW_API_KEY;
+const SILICONFLOW_API_KEY = import.meta.env.VITE_SILICONFLOW_API_KEY;
 
 // 文本模型：用于生成减重计划
 const TEXT_MODEL = 'Qwen/Qwen2.5-72B-Instruct';
