@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     ],
   },
 ], {
-  basename: import.meta.env.BASE_URL
+  basename: '/SnapCalorie'
 });
 
 export default function App() {
